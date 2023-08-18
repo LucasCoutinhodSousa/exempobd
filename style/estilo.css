@@ -1,0 +1,24 @@
+
+.principal{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+form {
+    display: inline-block;
+    width: 300px;
+    
+}
+
+form label {
+    display:block;
+    font-size: 20px;
+}
+
+form input {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 100%;
+}

@@ -20,9 +20,9 @@ include('conexao.php');
     $query = $dbh->prepare('insert into produtos (nome, valor, quantidade) values(:nome, :valor, :quantidade)');
 
     $query->execute(array(
-        ':nome' -> $nome,
-        ':valor' -> $valor,
-        ':quantidade' -> $quantidade
+        ':nome' => $nome,
+        ':valor' => $valor,
+        ':quantidade' => $quantidade
     ));
 
     print_r($dbh);

@@ -1,19 +1,20 @@
-
 .principal{
     display: flex;
     align-items: center;
     width: 50%;
+    
 }
 
 form {
     display: inline-block;
     width: 300px;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 form label {
     display:block;
     font-size: 20px;
+    
 }
 
 form input {

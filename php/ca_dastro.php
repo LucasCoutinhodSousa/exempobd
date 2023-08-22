@@ -6,7 +6,7 @@ include('conexao.php');
 
 
 
-    if(isset($_POST['nome'],$_POST['valor'],$_POST['quantidade'])){
+    if(isset($_POST['nome'],$_POST['valor'],$_POST['quantidade']) && $_POST['nome']!='' && $_POST['valor']!=''){
         $nome = $_POST['nome'];
         $valor = $_POST['valor'];
         $quantidade = $_POST['quantidade'];

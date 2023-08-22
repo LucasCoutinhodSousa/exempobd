@@ -4,9 +4,16 @@ include('conexao.php');
     print_r($_POST);
     echo '<pre>';
 
-    $nome = $_POST['nome'];
-    $valor = $_POST['valor'];
-    $quantidade = $_POST['quantidade'];
+
+
+    if(isset($_POST['nome'],$_POST['valor'],$_POST['quantidade'])){
+        $nome = $_POST['nome'];
+        $valor = $_POST['valor'];
+        $quantidade = $_POST['quantidade'];
+    }else{
+        echo 'Variaveis nao definidas';
+        die();
+    }
 
     echo '<br>';
     echo $nome;

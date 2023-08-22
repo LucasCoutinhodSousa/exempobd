@@ -5,9 +5,9 @@
 
     $produtos = $query->fetchAll();
 
-    echo '<pre>';
+    /*echo '<pre>';
     print_r($produtos);
-    echo '<pre>';
+    echo '<pre>';*/
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +34,16 @@
                     <td>8,99</td>
                     <td>28</td>
                 </tr>
+                <?php
+                    foreach($produtos as $produtos){
+                        echo '<tr>';
+                        echo '<td>'.$produtos['id'].'</td>';
+                        echo '<td>'.$produtos['nome'].'</td>';
+                        echo '<td>'.$produtos['valor'].'</td>';
+                        echo '<td>'.$produtos['quantidade'].'</td>';
+                        echo '</tr>';
+                    }
+                ?>
             </tbody>
         </table>
     </body>

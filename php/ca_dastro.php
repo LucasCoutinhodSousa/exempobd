@@ -1,11 +1,11 @@
 <?php
 include('conexao.php');
-    echo '<pre>';
+   /* echo '<pre>';
     print_r($_POST);
-    echo '<pre>';
+    echo '<pre>';*/
 
 
-
+    try{
     if(isset($_POST['nome'],$_POST['valor'],$_POST['quantidade']) && $_POST['nome']!='' && $_POST['valor']!=''){
         $nome = $_POST['nome'];
         $valor = $_POST['valor'];
@@ -13,6 +13,9 @@ include('conexao.php');
     }else{
         echo 'Variaveis nao definidas';
         die();
+    }
+    }catch(PDOExcpetion $e){
+        throw new MyDatabaseException( $Exception->getMessage( ) , (int)$Exception->getCode( ) );
     }
 
     echo '<br>';

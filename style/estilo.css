@@ -26,3 +26,30 @@ form input {
     padding: 10px 25px;
     width: 80%;
 }
+
+.principal{
+    display: flex;
+    margin: auto 600px;
+}
+
+table{
+    background-color: aqua;
+    border-radius: 30px;
+    width: 600px;
+}
+
+tr:nth-child(even){
+
+    background-color: blue;
+    color: white;
+}
+
+th{
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    background: #A9D3F2;
+}

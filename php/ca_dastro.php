@@ -18,16 +18,16 @@ include('conexao.php');
         throw new MyDatabaseException( $Exception->getMessage( ) , (int)$Exception->getCode( ) );
     }
 
-    echo '<br>';
+    /*echo '<br>';
     echo $nome;
     echo '<br>';
     echo $valor;
     echo '<br>';
-    echo $quantidade;
+    echo $quantidade;*/
 
     echo '<br>';
 
-    $query = $dbh->prepare('insert into produtos (nome, valor, quantidade) values(:nome, :valor, :quantidade)');
+    $query = $dbh->prepare('INSERT INTO produtos (nome, valor, quantidade) VALUES(:nome, :valor, :quantidade)');
 
     $query->execute(array(
         ':nome' => $nome,
@@ -35,5 +35,6 @@ include('conexao.php');
         ':quantidade' => $quantidade
     ));
 
-    print_r($dbh);
+    //print_r($dbh);
+    echo 'Inseridos com sucesso';
 ?>

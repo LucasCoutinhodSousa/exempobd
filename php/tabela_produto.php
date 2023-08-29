@@ -27,7 +27,6 @@
                         <th>Valor</th>
                         <th>Quantidade</th>
                     </tr>
-
                 </thead>
                 <tbody>
                     <tr>

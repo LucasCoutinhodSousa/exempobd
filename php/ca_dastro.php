@@ -18,12 +18,6 @@ include('conexao.php');
         throw new MyDatabaseException( $Exception->getMessage( ) , (int)$Exception->getCode( ) );
     }
 
-    /*echo '<br>';
-    echo $nome;
-    echo '<br>';
-    echo $valor;
-    echo '<br>';
-    echo $quantidade;*/
 
     echo '<br>';
 

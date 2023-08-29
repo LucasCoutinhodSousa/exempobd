@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Cadastro</title>
+        <title>atualizar Produto</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <link rel="stylesheet" href="../style/estilo.css">
     </head>
     <body>
         <div class="plincipal">
-            <form action="../php/ca_dastro.php" method="post">
+            <form action="" method="post">
                 <label for="">Nome produto</label>
                 <input type="text" name="nome"><br>
 

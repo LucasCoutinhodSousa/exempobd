@@ -8,8 +8,9 @@
     </head>
     <body>
         <div class="plincipal">
+            <h1>Atualizar Produtos</h1>
             <form action="" method="post">
-                <input type="hidden" name="idProd" value="<?php echo $_GET['idProd'];?>">
+                <input type="hidden" name="idProd" value="<?php echo $_GET['idProd']; ?>">
                 <label for="">Nome produto</label>
                 <input type="text" name="nome"><br>
 

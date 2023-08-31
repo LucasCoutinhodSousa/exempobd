@@ -3,5 +3,9 @@
     $user = 'root';
     $password = '';
 
-    
+    try{
+        $dbh = new PDO($dsn, $user, $password);
+    }catch(PDOExcpetion $e){
+        throw new MyDatabaseException( $Exception->getMessage('Con') , (int)$Exception->getCode( ) );
+    }
 ?>

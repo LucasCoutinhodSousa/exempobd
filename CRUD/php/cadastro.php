@@ -1,6 +1,7 @@
 <?php
-    include('conector.php');
+    include('cadastro.php');
 
+    
     if(isset(
         $_POST['nome'],$_POST['idade'],$_POST['sexo']
     ) && $_POST['nome'] !='' &&$_POST['idade']!=''){
@@ -12,13 +13,11 @@
         die();
     }
 
-    $query = $dbh->prepare('INSERT INTO pessoa(nome, idade, sexo) VALUES(:nome, :idade, :sexo)');
+    $query = $dbh->prepare('INSERT INTO pessoa(nome, idade) VALUES(:nome, :idade, :sexo)');
 
     $query->execute(array(
         ':nome' => $nome,
         ':valor' => $idade,
-        ':sexo' = $sexo
+        ':sexo' => $sexo
     ));
-
-    echo 'Inseridos'
 ?>

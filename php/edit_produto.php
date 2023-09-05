@@ -35,7 +35,6 @@
                     <?php
                         foreach($categoria as $linha){
                             echo '<option value="'.$linha['cod'].'">'.$linha['categoria'].'</option>';
-
                         }
                     ?>
                 </select>

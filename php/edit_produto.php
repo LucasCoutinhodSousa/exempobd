@@ -1,3 +1,13 @@
+<?php
+        include('conexao.php');
+        $query = $dbh->prepare('SELECT * FROM categoria');
+        $query->execute();
+    
+        $categoria = $query->fetchAll();
+        /*echo '<pre>';
+        print_r($categoria);
+        echo '</pre>';*/
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -20,6 +30,15 @@
                 <label for="">Quantidade</label>
                 <input type="number" name="quantidade" id=""><br>
                 <br>
+                <label for="">Categoria</label>
+                <select name="categoria" id="">
+                    <?php
+                        foreach($categoria as $linha){
+                            echo '<option value="'.$linha['cod'].'">'.$linha['categoria'].'</option>';
+
+                        }
+                    ?>
+                </select>
                 <input type="submit" value="Cadastrar"><br>
             </form>
         </div>

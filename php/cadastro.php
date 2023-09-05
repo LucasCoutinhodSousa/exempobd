@@ -4,9 +4,9 @@
         $query->execute();
     
         $categoria = $query->fetchAll();
-        echo '<pre>';
+        /*echo '<pre>';
         print_r($categoria);
-        echo '</pre>';
+        echo '</pre>';*/
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,13 +31,11 @@
                 <select name="categoria" id="">
                     <?php
                         foreach($categoria as $linha){
-                            echo '<option value="'.$linha[cod].'">'.$linha['categoria']
+                            echo '<option value="'.$linha['cod'].'">'.$linha['categoria'].'</option>';
+
                         }
                     ?>
-                    <option value="fru">Fruta</option>
-                    <option value="ver">Verdura</option>
-                    <option value="nop">Nao perecivel</option>
-                    <option value="fru">Fruta</option>
+                    <option value=""></option>
                 </select>
                 <input type="submit" value="Cadastrar"><br>
             </form>

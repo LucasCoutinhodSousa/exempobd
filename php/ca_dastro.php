@@ -10,6 +10,7 @@ include('conexao.php');
         $nome = $_POST['nome'];
         $valor = $_POST['valor'];
         $quantidade = $_POST['quantidade'];
+        $categoria = $_POST['categoria'];
     }else{
         echo 'Variaveis nao definidas';
         die();
@@ -27,12 +28,13 @@ include('conexao.php');
 
     echo '<br>';
 
-    $query = $dbh->prepare('INSERT INTO produtos (nome, valor, quantidade) VALUES(:nome, :valor, :quantidade)');
+    $query = $dbh->prepare('INSERT INTO produtos (nome, valor, quantidade, cat) VALUES(:nome, :valor, :quantidade, :cat)');
 
     $query->execute(array(
         ':nome' => $nome,
         ':valor' => $valor,
-        ':quantidade' => $quantidade
+        ':quantidade' => $quantidade,
+        ':cat' => $categoria
     ));
 
     //print_r($dbh);

@@ -42,6 +42,7 @@
                             echo '<td>'.$produtos['nome'].'</td>';
                             echo '<td>'.$produtos['valor'].'</td>';
                             echo '<td>'.$produtos['quantidade'].'</td>';
+                            echo '<td>'.$produtos['cat'].'</td>';
                             echo '<td><a href="edit_produto.php?idProd='.$produtos['id'].'">Edit</a></td>';
                             echo '</tr>';
                         }

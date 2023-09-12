@@ -33,14 +33,17 @@ alter TABLE produtos add CONSTRAINT fk_categoria FOREIGN KEY (cat) REFERENCES ca
 
 alter table produtos drop FOREIGN KEY fk_categoria;
 
+SELECT id, nome, valor, quantidade, categoria from produtos INNER JOIN categoria on produtos.cat = categoria.cod;
+
 DESCRIBE produtos;
 
 UPDATE produtos set cat = 'fru';
 
 insert into produtos (nome, valor, quantidade) values ('Maca', '10,89', 59);
-update produtos set nome='Pneu' ,valor =90.5 ,quantidade=5 where  id=1;
+update produtos set nome='Pneu' ,valor =399 ,quantidade=5, cat='automotivo' where  id=5;
 
 select * from pessoa;
 select * from produtos;
 select * from categoria;
+
 

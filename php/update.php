@@ -29,7 +29,7 @@ include('conexao.php');
 
     echo '<br>';
 
-    $query = $dbh->prepare('UPDATE produtos SET nome=:nome, valor=:valor ,quantidade=:quantidade, categoria=:categoria WHERE  id=:idProd;');
+    $query = $dbh->prepare('UPDATE produtos SET nome=:nome, valor=:valor ,quantidade=:quantidade, cat=:categoria WHERE  id=:idProd;');
 
     $query->execute(array(
         ':nome' => $nome,

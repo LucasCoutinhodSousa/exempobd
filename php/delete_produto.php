@@ -1,7 +1,7 @@
-<?hphp
+<?php
     include('conexao.php');
-    if(isset($_GET[idProd])){
-        $idProd = $_GET[idProd];
+    if(isset($_GET['idProd'])){
+        $idProd = $_GET['idProd'];
     }else{
         echo 'Variaveis nao definidas';
         die();

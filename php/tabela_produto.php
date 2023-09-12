@@ -50,6 +50,7 @@
                             echo '<td>'.$produtos['quantidade'].'</td>';
                             echo '<td>'.$produtos['categoria'].'</td>';
                             echo '<td><a href="edit_produto.php?idProd='.$produtos['id'].'">Edit</a></td>';
+                            echo '<td><a href="delete_produto.php?idProd='.$produtos['id'].'">Delet</a></td>';
                             echo '</tr>';
                         }
                     ?>

@@ -11,6 +11,7 @@ include('conexao.php');
         $nome = $_POST['nome'];
         $valor = $_POST['valor'];
         $quantidade = $_POST['quantidade'];
+        $categoria = $_POST['categoria'];
     }else{
         echo 'Variaveis nao definidas';
         die();
@@ -28,13 +29,14 @@ include('conexao.php');
 
     echo '<br>';
 
-    $query = $dbh->prepare('UPDATE produtos SET nome=:nome, valor=:valor ,quantidade=:quantidade WHERE  id=:idProd;');
+    $query = $dbh->prepare('UPDATE produtos SET nome=:nome, valor=:valor ,quantidade=:quantidade, cat=:categoria WHERE  id=:idProd;');
 
     $query->execute(array(
         ':nome' => $nome,
         ':valor' => $valor,
         ':quantidade' => $quantidade,
-        ':idProd' => $idProd
+        ':idProd' => $idProd,  
+        ':categoria' => $categoria
     ));
 
     //print_r($dbh);

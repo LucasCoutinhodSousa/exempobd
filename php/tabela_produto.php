@@ -1,6 +1,7 @@
 <?php
     include('conexao.php');
-    $query = $dbh->prepare('SELECT * FROM produtos');
+    $query = $dbh->prepare('SELECT id, nome, valor, quantidade, categoria 
+    from produtos INNER JOIN categoria on produtos.cat = categoria.cod;');
     $query->execute();
 
     $produtos = $query->fetchAll();
@@ -47,7 +48,7 @@
                             echo '<td>'.$produtos['nome'].'</td>';
                             echo '<td>'.$produtos['valor'].'</td>';
                             echo '<td>'.$produtos['quantidade'].'</td>';
-                            echo '<td>'.$categoria[$produtos['cat']].'</td>';
+                            echo '<td>'.$produtos['categoria'].'</td>';
                             echo '<td><a href="edit_produto.php?idProd='.$produtos['id'].'">Edit</a></td>';
                             echo '</tr>';
                         }

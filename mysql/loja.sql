@@ -20,6 +20,14 @@ CREATE TABLE categoria(
     categoria VARCHAR(15) not null
 );
 
+CREATE TABLE login(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    login VARCHAR(9) not null UNIQUE,
+    senha VARCHAR(100) not null
+);
+
+insert into login(login, senha) VALUES ('lucas', '12345lu');
+
 insert into categoria(cod, categoria) 
 values 
 ('fru', 'fruta'),
